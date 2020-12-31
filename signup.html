@@ -13,19 +13,21 @@
             margin-right: auto;
             padding: 25px;
         }
+
         .input-lable {
             margin: 0;
             margin-bottom: 4px;
             margin-top: 12px;
         }
+
         .input-item {
             width: 100%;
         }
+
         #check {
             margin-top: 12px;
             margin-bottom: 18px;
         }
-
     </style>
 </head>
 
@@ -34,19 +36,25 @@
     <form id="registration">
         <div>
             <p class="input-lable">Name:</p>
-            <input class="input-item" type="text" name="name" placeholder="Name" autofocus>
+            <input class="input-item" type="text" name="name" placeholder="Name" autofocus required>
         </div>
         <div>
             <p class="input-lable">E-mail:</p>
-            <input class="input-item" type="email" name="E-mail" placeholder="Email">
+            <input class="input-item" type="email" name="E-mail" placeholder="Email" required>
+        </div>
+        <div>
+            <p class="input-lable">Age:</p>
+            <input class="input-item" type="number" name="age" placeholder="Enter your Age" min="18" max="50">
         </div>
         <div>
             <p class="input-lable">Password:</p>
-            <input class="input-item" type="password" name="Password" placeholder="Enter Password">
+            <input class="input-item" type="password" name="Password" placeholder="Enter Password" required
+                minlength="6">
         </div>
         <div>
             <p class="input-lable">Confirm Password:</p>
-            <input class="input-item" type="password" name="Confirm-Password" placeholder="Confirm Password">
+            <input class="input-item" type="password" name="Confirm-Password" placeholder="Confirm Password" required
+                minlength="6">
         </div>
         <div>
             <p class="input-lable">Gender:</p>
@@ -59,13 +67,14 @@
         </div>
         <div>
             <p class="input-lable">Security Question:</p>
-            <select class="input-item" name="Secutity-Question" multiple>
+            <select class="input-item" name="Secutity-Question" >
                 <option value="pet_name">What was your first pet name?</option>
                 <option value="first-job">What was your first job?</option>
                 <option value="mother_name">What is your mother mid name?</option>
             </select>
             <div>
-                <textarea class="input-item" name="answer" rows="6" cols="30" placeholder="Enter your Answer"></textarea>
+                <textarea class="input-item" name="answer" rows="6" cols="30"
+                    placeholder="Enter your Answer"></textarea>
             </div>
             <div>
                 <input id="check" type="checkbox" name="termCond" value="accept">
